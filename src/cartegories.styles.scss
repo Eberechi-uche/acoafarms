@@ -1,0 +1,99 @@
+// HEAD ---- SECTION
+
+h3 {
+  font-size: xx-large;
+}
+.header {
+  width: 100vw;
+  text-align: center;
+}
+
+// NAV ---- SECTION
+.nav {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  .nav-fl {
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin: 0 5px;
+    }
+  }
+}
+// MAIN --- SECTION
+.main {
+  width: 100vw;
+  height: 50vh;
+  display: grid;
+  place-content: center;
+}
+.test {
+  background-color: azure;
+}
+// CARDS --- SECTION
+.card-container {
+  width: 100vw;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  border: 2px solid rgba(223, 220, 220, 0.643);
+  width: 90vw;
+  margin: 15px;
+  .card-image {
+    background-color: aqua;
+    height: 50vh;
+    width: inherit;
+    .test {
+      width: inherit;
+      height: inherit;
+      background-color: black;
+    }
+  }
+  .card-desc {
+    padding: 10px;
+    text-align: center;
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+// SECTIONS ----- SECTION
+.section-container {
+  text-align: center;
+  .section-header {
+    margin-bottom: 1px;
+  }
+}
+.section-card {
+  margin: 15px;
+  padding: 15px;
+  text-align: start;
+  background-color: antiquewhite;
+}
+.border {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+// BUTTON  ---- SECTIONS
+.btn {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.btn-fill {
+  min-width: 80vw;
+}
+.btn-primary {
+  background-color: #4caf50; /* Green */
+}
