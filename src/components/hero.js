@@ -3,7 +3,7 @@ export default function Hero() {
     <div>
       <header className="header">
         <nav className="nav">
-          <div> acoa</div>
+          <div> ACOA</div>
           <div className="nav-fl">
             <p> cart</p>
             <p> sign In</p>

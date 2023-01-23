@@ -1,13 +1,11 @@
-export default function Section({ itemName }) {
+export function Section({ product }) {
+  const { name, description } = product;
   return (
     <div>
       <div className=" section-card">
         <div className=" border">
-          <h3> {itemName}</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            tenetur.
-          </p>
+          <h3> {name}</h3>
+          <p>{description}</p>
           <button className="btn btn-primary">Order Now</button>
         </div>
       </div>

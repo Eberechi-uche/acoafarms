@@ -1,0 +1,25 @@
+.fl {
+  display: flex;
+}
+
+.gr {
+  display: grid;
+  height: auto;
+  width: 100%;
+  place-content: center;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    li {
+      list-style: none;
+      margin: 0 10px;
+    }
+  }
+}
+
+ul {
+  background-color: beige;
+}
+li {
+  margin: 0 30px;
+}
