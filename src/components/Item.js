@@ -1,4 +1,4 @@
-export function Items() {
+export function Items({ item, price, desc, image }) {
   return (
     <div className="card-container">
       <div className="card">
@@ -7,11 +7,10 @@ export function Items() {
         </div>
         <div className="card-desc">
           <div className="card-title">
-            <h4>Pork</h4>
+            <h4>{item}</h4>
             <p> $200</p>
           </div>
           <p>
-            {" "}
             Naturally reared, freshly smoked porked, made with love, with love
           </p>
           <button className="btn  btn-primary btn-fill"> add to cart</button>

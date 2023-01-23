@@ -1,9 +1,9 @@
-export default function Section() {
+export default function Section({ itemName }) {
   return (
     <div>
       <div className=" section-card">
         <div className=" border">
-          <h3> Beef</h3>
+          <h3> {itemName}</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
             tenetur.

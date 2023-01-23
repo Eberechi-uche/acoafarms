@@ -9,11 +9,16 @@ function App() {
     <>
       <Hero></Hero>
       <Layout title={"products"}>
-        <Section></Section>
-        <Section></Section>
+        <Section itemName={"Beef"}></Section>
+        <Section itemName={"Pork"}></Section>
+        <Section itemName={"Fish"}></Section>
+        <Section itemName={"Chicken"}></Section>
+        <Section itemName={"Grills"}></Section>
       </Layout>
       <Layout title={"best sellers"}>
-        <Items></Items>
+        <Items item={"pork"}></Items>
+        <Items item={"smoked fish"}></Items>
+        <Items item={"grilled pork"}></Items>
       </Layout>
     </>
   );
