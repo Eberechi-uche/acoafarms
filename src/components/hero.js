@@ -1,17 +1,10 @@
-export default function Hero() {
+export default function Hero({ title }) {
   return (
     <div>
       <header className="header">
-        <nav className="nav">
-          <div> ACOA</div>
-          <div className="nav-fl">
-            <p> cart</p>
-            <p> sign In</p>
-          </div>
-        </nav>
         <main className="main test">
           <div>
-            <h1> acoa</h1>
+            <h1> {title}</h1>
             <button className="btn btn-primary">show now</button>
           </div>
         </main>

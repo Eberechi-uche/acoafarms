@@ -45,7 +45,7 @@ function Home() {
 
   return (
     <>
-      <Hero></Hero>
+      <Hero title={"ACOA"}></Hero>
       <Layout title={"products"}>
         {prods.map((element) => (
           <Section key={element.id} product={element}></Section>

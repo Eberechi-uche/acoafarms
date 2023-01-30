@@ -8,6 +8,7 @@ export default function Footer() {
         <ul className="fl">
           <li>instagram</li>
           <li>FaceBook</li>
+          <li>whatsapp</li>
         </ul>
       </div>
     </Layout>
