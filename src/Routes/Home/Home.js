@@ -1,7 +1,7 @@
-import { Section, Layout } from "../../components/Section";
+import { Layout, SectionMain } from "../../components/Section";
 import Footer from "../../components/footer";
 import Hero from "../../components/hero";
-import { Items } from "../../components/Item";
+import { Items, ItemsCard } from "../../components/Item";
 
 function Home() {
   const prods = [
@@ -48,7 +48,7 @@ function Home() {
       <Hero title={"ACOA"}></Hero>
       <Layout title={"products"}>
         {prods.map((element) => (
-          <Section key={element.id} product={element}></Section>
+          <ItemsCard key={element.id} product={element}></ItemsCard>
         ))}
       </Layout>
       <Layout title={"best sellers"}>
@@ -56,6 +56,7 @@ function Home() {
           <Items key={element.id} product={element}></Items>
         ))}
       </Layout>
+      <SectionMain />
       <Footer></Footer>
     </>
   );
