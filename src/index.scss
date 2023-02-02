@@ -1,14 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Abril Fatface", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(61, 59, 59);
 }
-p {
+p,
+li {
   color: rgb(126, 124, 124);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
 }

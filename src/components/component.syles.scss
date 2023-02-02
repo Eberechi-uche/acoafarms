@@ -1,25 +1,89 @@
+// general classes
+// FONT-COLOR
+.fnt-md {
+  font-size: 1.5em;
+}
+.white {
+  color: white;
+}
+.grey {
+  color: rgb(124, 124, 124);
+}
+// BACK-GROUND
+.bg-dark {
+  background-color: black;
+}
+// LAYOUT
 .fl {
   display: flex;
 }
-
+.fl-center {
+  justify-content: center;
+}
 .gr {
   display: grid;
   height: auto;
-  width: 100%;
+  width: 90%;
   place-content: center;
-  ul {
-    display: flex;
-    justify-content: space-around;
-    li {
-      list-style: none;
-      margin: 0 10px;
-    }
-  }
+}
+.li-flex-sp-around {
+  justify-content: space-around;
 }
 
-ul {
-  background-color: beige;
+// MARGINS
+.mg-bottom-5 {
+  margin-bottom: 0;
 }
-li {
-  margin: 0 30px;
+.mg-top-5 {
+  margin-top: 5px;
 }
+.mg-top-15 {
+  margin-top: 15px;
+}
+.mg-bottom-5 {
+  margin: 5px;
+}
+.mg-10 {
+  margin: 10px;
+}
+// PADDING
+.pd-0 {
+  padding: 0;
+}
+.pd-10 {
+  padding: 10px;
+}
+
+// TEXT
+.txt-start {
+  text-align: start;
+}
+// .list-row {
+//   li {
+//     margin: 0 30px;
+//   }
+// }
+// .list-col {
+//   li {
+//     margin: 0;
+//   }
+// }
+// LIST
+.li-none {
+  list-style: none;
+}
+
+.image-container {
+  transform: translateX(20px);
+  width: 90vw;
+  height: 50vh;
+}
+.image-container img {
+  object-fit: contain;
+  width: 90%;
+  height: 100%;
+}
+
+// MEDIA QUERRIES
+// @media only screen and (max-width: 600px) {
+// }
