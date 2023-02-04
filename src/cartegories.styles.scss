@@ -2,6 +2,12 @@
 .bg-black {
   background-color: #323030;
 }
+.bg-primary {
+  background-color: var(--primary);
+}
+.text-primary {
+  color: var(--primary);
+}
 
 // HEAD ---- SECTION
 
@@ -38,15 +44,15 @@ h3 {
   background-color: azure;
 }
 // CARDS --- SECTION
-.card-container {
-  width: 100vw;
-  display: grid;
-  place-content: center;
-}
+// .card-container {
+//   width: 100vw;
+//   display: grid;
+//   place-content: center;
+// }
 
 .card {
   border: 2px solid rgba(223, 220, 220, 0.643);
-  width: 90vw;
+  width: 90%;
   height: fit-content;
   margin: 15px;
   .card-image {
@@ -102,12 +108,22 @@ h3 {
   min-width: 80%;
 }
 .btn-primary {
-  background-color: #4caf50; /* Green */
+  background-color: var(--primary); /* Green */
 }
 // FOOTER SECTION
-@media only screen and (min-width: 600px) {
-  .section-container {
+@media only screen and (min-width: 768px) {
+  .section-child {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .section-child {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
   }
 }

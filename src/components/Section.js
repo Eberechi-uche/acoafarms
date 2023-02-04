@@ -4,20 +4,22 @@ export function SectionMain() {
   return (
     <div>
       <div className="gr">
-        <ul className="li-flex">
+        <ul className="fl li-flex-sp-around">
           <li className="mg-10">instagram</li>
           <li className="mg-10">FaceBook</li>
           <li className="mg-10">whatsapp</li>
         </ul>
       </div>
       <div>
-        <div className="image-container">
+        <div className="image-container fl fl-center">
           <img src={imageLg} alt="raw beef and natural spice"></img>
         </div>
       </div>
       <div className="gr txt-start mg-10">
         <div>
-          <h3 className="mg-bottom-5"> All Natural feeds</h3>
+          <h3 className="mg-bottom-5">
+            All <span className="text-primary"> Natural</span> feeds
+          </h3>
           <div className=" gr pd-10">
             <div className="gr-item">
               <p>
@@ -51,11 +53,11 @@ export function SectionMain() {
 
 export function Layout({ children, title }) {
   return (
-    <div>
+    <>
       <section className="section-container">
         <h3 className="section-header">{title}</h3>
-        {children}
+        <div className="section-child">{children}</div>
       </section>
-    </div>
+    </>
   );
 }
