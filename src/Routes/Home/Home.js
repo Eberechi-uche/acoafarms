@@ -1,7 +1,7 @@
-import { Layout, SectionMain } from "../../components/Section";
-import Footer from "../../components/footer";
-import Hero from "../../components/hero";
-import { Items, ItemsCard } from "../../components/Item";
+import { Layout, SectionMain } from "../../components/Section.component";
+import Footer from "../../components/footer.component";
+import Hero from "../../components/hero.component";
+import { Items, ItemsCard } from "../../components/Item.component";
 
 function Home() {
   const prods = [
