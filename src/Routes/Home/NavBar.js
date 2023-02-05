@@ -1,4 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
+import { Profile } from "../../components/Profile.component";
+import googleIcon from "../../assets/icons/google.png";
 
 export function NavBar() {
   return (
@@ -15,8 +17,9 @@ export function NavBar() {
           <Link className="link" to="/sign-in">
             <p> sign In</p>
           </Link>
-
-          <p>menu</p>
+          <Link className="link" to="/sign-in">
+            <Profile image={googleIcon}></Profile>
+          </Link>
         </div>
       </nav>
       <Outlet></Outlet>

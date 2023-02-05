@@ -24,10 +24,12 @@ h3 {
   margin: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   .nav-fl {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     p {
       margin: 0 5px;
     }
