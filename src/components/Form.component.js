@@ -8,7 +8,7 @@ export function Form({
   title,
   action,
   handleClick,
-  handleOnSubmit,
+  onSubmit,
   state,
 }) {
   return (
@@ -21,7 +21,7 @@ export function Form({
           </div>
         )}
 
-        <form onSubmit={handleOnSubmit}>
+        <form onSubmit={onSubmit}>
           {children}
           <button className="btn bg-dark btn-fill">{action}</button>
         </form>

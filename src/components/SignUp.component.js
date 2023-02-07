@@ -78,9 +78,6 @@ export function SignUp() {
       console.log(userData);
     } catch (error) {
       setError(error.message);
-      console.log(typeof error.message);
-      signInError = error.message;
-      // alert(error.message);
     }
   };
 
@@ -91,7 +88,7 @@ export function SignUp() {
         action={"Sign Up"}
         handleClick={handleSubmit}
         state={"register"}
-        handleOnSubmit={(e) => {
+        onSubmit={(e) => {
           handleSubmit(e);
         }}
       >

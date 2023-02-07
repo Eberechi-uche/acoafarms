@@ -1,10 +1,10 @@
 import {
   signInWithGooglePopUp,
   createUserDocFromAuth,
+  AuthUserWithEmailAndPassword,
 } from "../Utils/firebase/firebase.utils";
 import { Form, Input } from "./Form.component";
 import Footer from "./footer.component";
-import { SignUp } from "./SignUp.component";
 import { useState } from "react";
 
 const initialUserState = {
@@ -13,13 +13,9 @@ const initialUserState = {
 };
 
 function SignIn() {
-  const [userDetails, setUserDetails] = useState({});
-
-  const logUser = async () => {
-    const { user } = await signInWithGooglePopUp();
-    const userData = await createUserDocFromAuth(user);
-    console.log(userData);
-  };
+  const [error, setError] = useState(null);
+  const [userDetails, setUserDetails] = useState(initialUserState);
+  const { email, password } = userDetails;
 
   function handleOnChange(e) {
     const { type, value } = e.target;
@@ -39,11 +35,46 @@ function SignIn() {
     }
   }
 
+  const logUser = async () => {
+    const { user } = await signInWithGooglePopUp();
+    const userData = await createUserDocFromAuth(user);
+    console.log(userData);
+  };
+
+  async function handleOnSubmit(e) {
+    e.preventDefault();
+    try {
+      const { user } = await AuthUserWithEmailAndPassword(email, password);
+      console.log(user);
+      const userData = await createUserDocFromAuth(user);
+    } catch (error) {
+      switch (error.code) {
+        case "auth/user-not-found": {
+          return setError("email does not exist");
+        }
+        case "auth/wrong-password": {
+          return setError("wrong password");
+        }
+        default: {
+          console.log(error);
+        }
+      }
+    }
+  }
+
   return (
     <>
       <div>
-        <Form title={"Sign in"} action={"Sign In"} handleClick={logUser}>
+        <Form
+          title={"Sign in"}
+          action={"Sign In"}
+          handleClick={logUser}
+          onSubmit={(e) => {
+            handleOnSubmit(e);
+          }}
+        >
           <p>Or login with your email</p>
+          {error && <p className="txt-red">{error}</p>}
           <Input
             label={"email"}
             type={"email"}
