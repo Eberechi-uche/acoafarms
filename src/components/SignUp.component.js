@@ -1,6 +1,6 @@
+import { useReducer, useState } from "react";
 import { Input, Form } from "./Form.component";
 import Footer from "./footer.component";
-import { useReducer, useState } from "react";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocFromAuth,
@@ -49,8 +49,10 @@ function reducer(state, action) {
     case "reset": {
       return formFields;
     }
+    default: {
+      throw Error("Unknown action: " + action.type);
+    }
   }
-  throw Error("Unknown action: " + action.type);
 }
 
 export function SignUp() {
@@ -58,7 +60,6 @@ export function SignUp() {
   const [error, setError] = useState(null);
   const { firstName, lastName, email, password, confirmPassword } = state;
   const displayName = firstName + " " + lastName;
-  let signInError = " none";
 
   const handleSubmit = async (event) => {
     // const { password, confirmPassword } = state;
@@ -74,8 +75,7 @@ export function SignUp() {
         password
       );
       dispatch({ type: "reset" });
-      const userData = await createUserDocFromAuth(user, displayName);
-      console.log(userData);
+      createUserDocFromAuth(user, displayName);
     } catch (error) {
       setError(error.message);
     }

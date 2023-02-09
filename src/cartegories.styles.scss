@@ -109,6 +109,9 @@ h3 {
 .btn-fill {
   min-width: 80%;
 }
+.btn:hover {
+  cursor: pointer;
+}
 .btn-primary {
   background-color: var(--primary); /* Green */
 }

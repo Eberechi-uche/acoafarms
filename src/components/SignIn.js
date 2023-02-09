@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   signInWithGooglePopUp,
   createUserDocFromAuth,
@@ -5,7 +6,6 @@ import {
 } from "../Utils/firebase/firebase.utils";
 import { Form, Input } from "./Form.component";
 import Footer from "./footer.component";
-import { useState } from "react";
 
 const initialUserState = {
   email: "",
@@ -32,21 +32,22 @@ function SignIn() {
           email: value,
         });
       }
+      default: {
+        return;
+      }
     }
   }
 
   const logUser = async () => {
     const { user } = await signInWithGooglePopUp();
-    const userData = await createUserDocFromAuth(user);
-    console.log(userData);
+    createUserDocFromAuth(user);
   };
 
   async function handleOnSubmit(e) {
     e.preventDefault();
     try {
       const { user } = await AuthUserWithEmailAndPassword(email, password);
-      console.log(user);
-      const userData = await createUserDocFromAuth(user);
+      createUserDocFromAuth(user);
     } catch (error) {
       switch (error.code) {
         case "auth/user-not-found": {
