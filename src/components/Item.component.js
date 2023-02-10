@@ -24,10 +24,14 @@ export function Items({ product }) {
 }
 
 export function ItemsCard({ product }) {
-  const { name, description } = product;
+  const { name, description, imageUrl } = product;
+
   return (
     <div>
-      <div className=" section-card">
+      <div
+        className=" section-card"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      >
         <div className=" border">
           <h3> {name}</h3>
           <p>{description}</p>

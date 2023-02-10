@@ -3,7 +3,6 @@ import { userContext } from "../../context/user.context";
 import { Outlet, Link } from "react-router-dom";
 import { userSignOut } from "../../Utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart/cart-icon.component";
-import CartDropDown from "../../components/cart/cart-dropdown.component";
 
 export function NavBar() {
   const { currentUser, setCurrentUser } = useContext(userContext);

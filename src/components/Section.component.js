@@ -1,5 +1,3 @@
-import imageLg from "../assets/images/beefImage.png";
-
 export function SectionMain() {
   return (
     <div>
@@ -12,7 +10,10 @@ export function SectionMain() {
       </div>
       <div>
         <div className="image-container fl fl-center">
-          <img src={imageLg} alt="raw beef and natural spice"></img>
+          <img
+            src="images/beefImage.png"
+            alt="raw beef and natural spice"
+          ></img>
         </div>
       </div>
       <div className="gr txt-start mg-10">

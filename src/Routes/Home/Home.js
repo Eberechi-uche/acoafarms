@@ -17,22 +17,22 @@ function Home() {
       id: 1,
       name: "Beef",
       price: 50,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ratione?",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      imageUrl: "images/Whole-fillet-beef.webp",
     },
     {
       id: 2,
       name: "Pork",
       price: 100,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ratione?",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      imageUrl: "images/pork.jpeg",
     },
     {
       id: 3,
       name: "Fish",
       price: 250,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ratione?",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      imageUrl: "images/fish.jpeg",
     },
     {
       id: 4,
@@ -40,6 +40,7 @@ function Home() {
       price: 500,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ratione?",
+      imageUrl: "images/chicken.jpeg",
     },
     {
       id: 5,
@@ -48,6 +49,7 @@ function Home() {
       price: 259,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ratione?",
+      imageUrl: "images/grills.jpeg",
     },
   ];
 
