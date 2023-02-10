@@ -5,7 +5,7 @@ import {
   AuthUserWithEmailAndPassword,
 } from "../Utils/firebase/firebase.utils";
 import { Form, Input } from "./Form.component";
-import Footer from "./footer.component";
+import { Footer } from "../components/Section.component";
 
 const initialUserState = {
   email: "",

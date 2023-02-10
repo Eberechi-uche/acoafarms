@@ -1,6 +1,6 @@
 import { useReducer, useState } from "react";
 import { Input, Form } from "./Form.component";
-import Footer from "./footer.component";
+import { Footer } from "./Section.component";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocFromAuth,

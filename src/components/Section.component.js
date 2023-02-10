@@ -51,13 +51,31 @@ export function SectionMain() {
   );
 }
 
-export function Layout({ children, title }) {
+export function Layout({ children, title, grid }) {
   return (
     <>
       <section className="section-container">
-        <h3 className="section-header">{title}</h3>
-        <div className="section-child">{children}</div>
+        {title && <h3 className="section-header">{title}</h3>}
+        <div className={grid ? grid : "section-child"}>{children}</div>
       </section>
     </>
+  );
+}
+
+export function Footer() {
+  return (
+    <div className="pd-10 bg-dark">
+      <div>
+        <h4 className="mg-0 white fnt-md">contact</h4>
+        <ul className="mg-0 li-none pd-0">
+          <li>number</li>
+          <li>info@company.com</li>
+          <li>location</li>
+        </ul>
+      </div>
+      <div className="fl fl-center">
+        <p>&copy; copyright 2023 ACOA</p>
+      </div>
+    </div>
   );
 }

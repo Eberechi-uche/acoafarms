@@ -1,9 +1,17 @@
-import { Layout, SectionMain } from "../../components/Section.component";
-import Footer from "../../components/footer.component";
+import { useContext } from "react";
+import { productsData } from "../../context/Products.content";
+
+import {
+  Layout,
+  SectionMain,
+  Footer,
+} from "../../components/Section.component";
+
 import Hero from "../../components/hero.component";
 import { Items, ItemsCard } from "../../components/Item.component";
 
 function Home() {
+  const topProducts = useContext(productsData);
   const prods = [
     {
       id: 1,
@@ -45,14 +53,14 @@ function Home() {
 
   return (
     <>
-      <Hero title={"ACOA"}></Hero>
-      <Layout title={"products"}>
+      <Hero title={"ACOA"} link={"/shop"}></Hero>
+      <Layout grid={"section-child-2"} title={"products"}>
         {prods.map((element) => (
           <ItemsCard key={element.id} product={element}></ItemsCard>
         ))}
       </Layout>
       <Layout title={"best sellers"}>
-        {prods.map((element) => (
+        {topProducts.map((element) => (
           <Items key={element.id} product={element}></Items>
         ))}
       </Layout>

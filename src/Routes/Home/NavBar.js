@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { userContext } from "../../context/user.context";
 import { Outlet, Link } from "react-router-dom";
 import { userSignOut } from "../../Utils/firebase/firebase.utils";
+import CartIcon from "../../components/cart/cart-icon.component";
+import CartDropDown from "../../components/cart/cart-dropdown.component";
 
 export function NavBar() {
   const { currentUser, setCurrentUser } = useContext(userContext);
@@ -20,9 +22,6 @@ export function NavBar() {
           <Link className="link" to="/shop">
             <p> shop</p>
           </Link>
-          <Link className="link" to="/cart">
-            <p> cart</p>
-          </Link>
           {currentUser ? (
             <p onClick={handleSignOut} className="btn bg-dark pd-s-5 ">
               sign Out
@@ -32,6 +31,7 @@ export function NavBar() {
               sign In
             </Link>
           )}
+          <CartIcon></CartIcon>
         </div>
       </nav>
       <Outlet></Outlet>

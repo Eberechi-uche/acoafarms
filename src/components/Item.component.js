@@ -1,10 +1,11 @@
 export function Items({ product }) {
-  const { price, name, description } = product;
+  const { price, name, description, id, imageUrl } = product;
   return (
-    <div className="card-container">
+    <div className="card-container" key={id}>
       <div className="card">
         <div className="card-image">
-          <div className="test"></div>
+          <img className="test" src={imageUrl} alt={`${name}`} />
+          {/* <div className="test"></div> */}
         </div>
         <div className="card-desc">
           <div className="card-title">
