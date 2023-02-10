@@ -3,9 +3,11 @@ import { userContext } from "../../context/user.context";
 import { Outlet, Link } from "react-router-dom";
 import { userSignOut } from "../../Utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart/cart-icon.component";
-
+import CartDropDown from "../../components/cart/cart-dropdown.component";
+import { cartContext } from "../../context/cart-item.context";
 export function NavBar() {
   const { currentUser, setCurrentUser } = useContext(userContext);
+  const { isOpen } = useContext(cartContext);
   const handleSignOut = async () => {
     const user = await userSignOut();
     setCurrentUser(user);
@@ -18,6 +20,7 @@ export function NavBar() {
         </Link>
 
         <div className="nav-fl">
+          <CartIcon />
           <Link className="link" to="/shop">
             <p> shop</p>
           </Link>
@@ -30,7 +33,7 @@ export function NavBar() {
               sign In
             </Link>
           )}
-          <CartIcon></CartIcon>
+          {isOpen && <CartDropDown></CartDropDown>}
         </div>
       </nav>
       <Outlet></Outlet>

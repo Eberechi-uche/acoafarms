@@ -28,9 +28,10 @@
   padding: 20px;
   outline: 1px solid var(--primary);
   background-color: white;
-  top: 50px;
-  right: -20px;
+  top: 80px;
+  right: 20px;
   z-index: 5;
+  overflow: scroll;
 
   .empty-message {
     font-size: 18px;
@@ -50,4 +51,31 @@
 }
 .visible {
   display: none;
+}
+.cart-item-container {
+  width: 100%;
+  display: flex;
+  height: 80px;
+  margin-bottom: 10px;
+  font-weight: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+
+  .item-details {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+}
+hr {
+  border: 1px solid rgba(174, 174, 174, 0.393);
 }

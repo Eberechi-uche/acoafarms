@@ -1,19 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { ReactComponent as Cart } from "../../assets/icons/shopping-bag.svg";
-import "../cart/cart-icon.styles.scss";
-import CartDropDown from "./cart-dropdown.component";
+import "../cart/cart.styles.scss";
+import { cartContext } from "../../context/cart-item.context";
 
 const CartIcon = () => {
-  const [isActive, setIsActive] = useState(true);
+  const { isOpen, setIsOpen, cartCount } = useContext(cartContext);
   const handleClick = () => {
-    setIsActive(!isActive);
+    setIsOpen(!isOpen);
   };
   return (
     <>
       <div className="cart-icon-container" onClick={handleClick}>
         <Cart className="cart-icon"></Cart>
-        <span className="cart-item-count"> 0 </span>
-        <CartDropDown active={isActive} />
+        <span className="cart-item-count text-primary"> {cartCount} </span>
       </div>
     </>
   );
