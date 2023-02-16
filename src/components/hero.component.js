@@ -9,7 +9,7 @@ export default function Hero({ title, link }) {
             <h1> {title}</h1>
             {link && (
               <Link to={link}>
-                <button className="btn btn-primary">show now</button>
+                <button className="btn btn-primary">shop now</button>
               </Link>
             )}
           </div>

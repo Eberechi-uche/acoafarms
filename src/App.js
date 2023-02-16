@@ -6,6 +6,7 @@ import SignIn from "./components/SignIn";
 import { SignUp } from "./components/SignUp.component";
 import { Shop } from "./Routes/Shop/shop.component";
 import { ProductProvider } from "./context/Products.content";
+import Checkout from "./Routes/Checkout/Checkout.component";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/register" element={<SignUp />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/checkout" element={<Checkout />}></Route>
           </Route>
         </Routes>
       </ProductProvider>
