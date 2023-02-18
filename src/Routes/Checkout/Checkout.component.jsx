@@ -4,7 +4,10 @@ import { useContext, useEffect, useState } from "react";
 
 const Checkout = () => {
   const [total, setTotal] = useState(0);
-  const { cartItems } = useContext(cartContext);
+  const { cartItems, updateCartitems } = useContext(cartContext);
+  const handleClick = (type, name) => {
+    updateCartitems(name, type);
+  };
 
   useEffect(() => {
     let total = 0;
@@ -23,21 +26,17 @@ const Checkout = () => {
             name={name}
             quantity={quantity}
             image={imageUrl}
+            handleClick={handleClick}
           />
         ))}
       </div>
 
-      <h2 className="total-text"> {total}</h2>
+      <h2 className="total-text"> Total: {total}</h2>
     </div>
   );
 };
 
-export const CheckOutItems = ({ name, quantity, image }) => {
-  const { updateCartitems } = useContext(cartContext);
-  const item = name;
-  const handleClick = (type) => {
-    updateCartitems(item, type);
-  };
+export const CheckOutItems = ({ name, quantity, image, handleClick }) => {
   return (
     <div>
       <div className="checkout-container">
@@ -48,7 +47,7 @@ export const CheckOutItems = ({ name, quantity, image }) => {
             <div
               className="quantity-setter"
               onClick={() => {
-                handleClick("REDUCE");
+                handleClick("REDUCE", name);
               }}
             >
               -
@@ -57,7 +56,7 @@ export const CheckOutItems = ({ name, quantity, image }) => {
             <div
               className="quantity-setter"
               onClick={() => {
-                handleClick("ADD");
+                handleClick("ADD", name);
               }}
             >
               +
@@ -66,10 +65,11 @@ export const CheckOutItems = ({ name, quantity, image }) => {
 
           <p
             onClick={() => {
-              handleClick("DELETE");
+              handleClick("DELETE", name);
             }}
+            className="quantity-setter"
           >
-            X
+            &#10005;
           </p>
         </div>
       </div>

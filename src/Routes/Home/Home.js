@@ -18,7 +18,7 @@ function Home() {
       name: "Beef",
       price: 50,
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      imageUrl: "images/Whole-fillet-beef.webp",
+      imageUrl: "images/filletbeef.webp",
     },
     {
       id: 2,

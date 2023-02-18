@@ -74,6 +74,9 @@ const updateCart = (item, itemIndex, array, type) => {
       ];
     }
     case "REDUCE": {
+      if (item.quantity === 1) {
+        return [...array.slice(0, itemIndex), ...array.slice(itemIndex + 1)];
+      }
       return [
         ...array.slice(0, itemIndex),
         {
