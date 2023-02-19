@@ -7,7 +7,7 @@ import {
   Footer,
 } from "../../components/Section.component";
 
-import Hero from "../../components/hero.component";
+import { Hero, MainHero } from "../../components/hero.component";
 import { Items, ItemsCard } from "../../components/Item.component";
 
 function Home() {
@@ -55,7 +55,7 @@ function Home() {
 
   return (
     <>
-      <Hero title={"ACOA"} link={"/shop"}></Hero>
+      <MainHero title={"ACOA"}></MainHero>
       <Layout grid={"section-child-2"} title={"products"}>
         {prods.map((element) => (
           <ItemsCard key={element.id} product={element}></ItemsCard>
