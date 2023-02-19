@@ -76,6 +76,7 @@ function SignIn() {
         >
           <p>Or login with your email</p>
           {error && <p className="txt-red">{error}</p>}
+
           <Input
             label={"email"}
             type={"email"}

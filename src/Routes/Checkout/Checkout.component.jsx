@@ -31,7 +31,7 @@ const Checkout = () => {
         ))}
       </div>
 
-      <h2 className="total-text"> Total: {total}</h2>
+      <h2 className="total-text"> Total:&#8358; {total}</h2>
     </div>
   );
 };

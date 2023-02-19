@@ -93,22 +93,26 @@ export function SignUp() {
         }}
       >
         {error && <p className="txt-red">{error}</p>}
-        <Input
-          label={"First name"}
-          type={"text"}
-          value={firstName}
-          onChange={(e) => {
-            dispatch({ type: "firstName", value: e.target.value });
-          }}
-        />
-        <Input
-          label={"Last name"}
-          type={"text"}
-          value={lastName}
-          onChange={(e) => {
-            dispatch({ type: "lastName", value: e.target.value });
-          }}
-        />
+        <div className="fl fl-row mg-5 ">
+          <Input
+            label={"First name"}
+            type={"text"}
+            value={firstName}
+            onChange={(e) => {
+              dispatch({ type: "firstName", value: e.target.value });
+            }}
+            className="mg-5"
+          />
+          <Input
+            label={"Last name"}
+            type={"text"}
+            value={lastName}
+            onChange={(e) => {
+              dispatch({ type: "lastName", value: e.target.value });
+            }}
+          />
+        </div>
+
         <Input
           label={"Email"}
           type={"email"}
@@ -117,22 +121,24 @@ export function SignUp() {
             dispatch({ type: "email", value: e.target.value });
           }}
         />
-        <Input
-          label={"Password"}
-          type={"password"}
-          value={password}
-          onChange={(e) => {
-            dispatch({ type: "password", value: e.target.value });
-          }}
-        />
-        <Input
-          label={"Confirm Password"}
-          type={"password"}
-          value={confirmPassword}
-          onChange={(e) => {
-            dispatch({ type: "confirmPassword", value: e.target.value });
-          }}
-        />
+        <div className="fl ">
+          <Input
+            label={"Password"}
+            type={"password"}
+            value={password}
+            onChange={(e) => {
+              dispatch({ type: "password", value: e.target.value });
+            }}
+          />
+          <Input
+            label={"Confirm Password"}
+            type={"password"}
+            value={confirmPassword}
+            onChange={(e) => {
+              dispatch({ type: "confirmPassword", value: e.target.value });
+            }}
+          />
+        </div>
       </Form>
       <Footer />
     </>

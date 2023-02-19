@@ -40,3 +40,21 @@ export function NavBar() {
     </>
   );
 }
+// const MobileNav = () => {
+//   return (
+//     <>
+//       <nav className="nav mobile-nav">
+//         <Link className="link" to="/">
+//           <div> ACOA</div>
+//         </Link>
+//         <div className="nav-fl">
+//           <CartIcon />
+//           <Link className="link" to="/shop">
+//             <p> shop</p>
+//           </Link>
+//           {isOpen && <CartDropDown></CartDropDown>}
+//         </div>
+//       </nav>
+//     </>
+//   );
+// };

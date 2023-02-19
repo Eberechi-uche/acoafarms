@@ -23,7 +23,7 @@ export function Form({
 
         <form onSubmit={onSubmit}>
           {children}
-          <button className="btn bg-dark btn-fill">{action}</button>
+          <button className=" btn-round bg-dark btn-fill">{action}</button>
         </form>
         <div className="fl fl-center pd-10"></div>
         {state === "register" ? (
